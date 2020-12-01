@@ -14,7 +14,12 @@
 		84720F1A257437A7000929C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84720F19257437A7000929C5 /* Assets.xcassets */; };
 		84720F1D257437A7000929C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84720F1B257437A7000929C5 /* LaunchScreen.storyboard */; };
 		8F4468542575194F00A058BC /* HTTPLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4468532575194F00A058BC /* HTTPLoader.swift */; };
-		8F44685825751B2900A058BC /* URLSession+HTTPLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F44685725751B2900A058BC /* URLSession+HTTPLoading.swift */; };
+		8F44685825751B2900A058BC /* URLSessionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F44685725751B2900A058BC /* URLSessionLoader.swift */; };
+		8FE163372576311400344D8D /* ChainingOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE163362576311400344D8D /* ChainingOperator.swift */; };
+		8FE1633B257631E100344D8D /* ModifyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE1633A257631E100344D8D /* ModifyRequest.swift */; };
+		8FE1633F257632A900344D8D /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE1633E257632A900344D8D /* StarWarsAPI.swift */; };
+		8FE16346257640E600344D8D /* ServerEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE16345257640E600344D8D /* ServerEnvironment.swift */; };
+		8FE1634A2576428C00344D8D /* ApplyEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE163492576428C00344D8D /* ApplyEnvironment.swift */; };
 		8FE3F9752574ED65009756AF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3F9742574ED65009756AF /* HTTPMethod.swift */; };
 		8FE3F9782574F057009756AF /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3F9772574F057009756AF /* HTTPRequest.swift */; };
 		8FE3F97B2574F47D009756AF /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE3F97A2574F47D009756AF /* HTTPResponse.swift */; };
@@ -38,7 +43,12 @@
 		84720F1C257437A7000929C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84720F1E257437A7000929C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F4468532575194F00A058BC /* HTTPLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPLoader.swift; sourceTree = "<group>"; };
-		8F44685725751B2900A058BC /* URLSession+HTTPLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+HTTPLoading.swift"; sourceTree = "<group>"; };
+		8F44685725751B2900A058BC /* URLSessionLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionLoader.swift; sourceTree = "<group>"; };
+		8FE163362576311400344D8D /* ChainingOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainingOperator.swift; sourceTree = "<group>"; };
+		8FE1633A257631E100344D8D /* ModifyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyRequest.swift; sourceTree = "<group>"; };
+		8FE1633E257632A900344D8D /* StarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
+		8FE16345257640E600344D8D /* ServerEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerEnvironment.swift; sourceTree = "<group>"; };
+		8FE163492576428C00344D8D /* ApplyEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyEnvironment.swift; sourceTree = "<group>"; };
 		8FE3F9742574ED65009756AF /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		8FE3F9772574F057009756AF /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		8FE3F97A2574F47D009756AF /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
@@ -98,9 +108,35 @@
 			isa = PBXGroup;
 			children = (
 				8F4468532575194F00A058BC /* HTTPLoader.swift */,
-				8F44685725751B2900A058BC /* URLSession+HTTPLoading.swift */,
+				8F44685725751B2900A058BC /* URLSessionLoader.swift */,
+				8FE1633A257631E100344D8D /* ModifyRequest.swift */,
+				8FE163492576428C00344D8D /* ApplyEnvironment.swift */,
 			);
 			path = Loading;
+			sourceTree = "<group>";
+		};
+		8FE163352576310000344D8D /* ChainingOperator */ = {
+			isa = PBXGroup;
+			children = (
+				8FE163362576311400344D8D /* ChainingOperator.swift */,
+			);
+			path = ChainingOperator;
+			sourceTree = "<group>";
+		};
+		8FE1633D2576329D00344D8D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8FE1633E257632A900344D8D /* StarWarsAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8FE16344257640D700344D8D /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				8FE16345257640E600344D8D /* ServerEnvironment.swift */,
+			);
+			path = Environment;
 			sourceTree = "<group>";
 		};
 		8FE3F9932575034F009756AF /* Body */ = {
@@ -126,6 +162,9 @@
 		8FE3F99A257518D4009756AF /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				8FE16344257640D700344D8D /* Environment */,
+				8FE1633D2576329D00344D8D /* API */,
+				8FE163352576310000344D8D /* ChainingOperator */,
 				8F4468522575192300A058BC /* Loading */,
 				8FE3F9742574ED65009756AF /* HTTPMethod.swift */,
 				8FE3F9772574F057009756AF /* HTTPRequest.swift */,
@@ -210,19 +249,24 @@
 			files = (
 				8FE3F97B2574F47D009756AF /* HTTPResponse.swift in Sources */,
 				8FE3F991257501A1009756AF /* JSONBody.swift in Sources */,
+				8FE1633F257632A900344D8D /* StarWarsAPI.swift in Sources */,
 				8FE3F9752574ED65009756AF /* HTTPMethod.swift in Sources */,
 				8F4468542575194F00A058BC /* HTTPLoader.swift in Sources */,
 				8FE3F97E2574F4D0009756AF /* HTTPStatus.swift in Sources */,
 				84720F15257437A4000929C5 /* ViewController.swift in Sources */,
+				8FE1634A2576428C00344D8D /* ApplyEnvironment.swift in Sources */,
 				8FE3F99625751421009756AF /* FormBody.swift in Sources */,
-				8F44685825751B2900A058BC /* URLSession+HTTPLoading.swift in Sources */,
+				8F44685825751B2900A058BC /* URLSessionLoader.swift in Sources */,
 				8FE3F9822574F6C2009756AF /* HTTPError.swift in Sources */,
+				8FE16346257640E600344D8D /* ServerEnvironment.swift in Sources */,
 				8FE3F98E2575000C009756AF /* DataBody.swift in Sources */,
 				8FE3F9782574F057009756AF /* HTTPRequest.swift in Sources */,
 				8FE3F9852574F725009756AF /* HTTPResult.swift in Sources */,
 				84720F11257437A4000929C5 /* AppDelegate.swift in Sources */,
+				8FE1633B257631E100344D8D /* ModifyRequest.swift in Sources */,
 				84720F13257437A4000929C5 /* SceneDelegate.swift in Sources */,
 				8FE3F9882574F89C009756AF /* HTTPBody.swift in Sources */,
+				8FE163372576311400344D8D /* ChainingOperator.swift in Sources */,
 				8FE3F98B2574FF77009756AF /* EmptyBody.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
