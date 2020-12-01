@@ -19,6 +19,12 @@ public struct HTTPRequest {
     public init() {
         urlComponents.scheme = "https"
     }
+    
+    public init(path: String) {
+        urlComponents.scheme = "https"
+        self.path = path
+    }
+    
 }
 
 extension HTTPRequest {
