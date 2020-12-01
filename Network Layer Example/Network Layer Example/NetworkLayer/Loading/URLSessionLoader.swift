@@ -7,9 +7,23 @@
 
 import Foundation
 
-extension URLSession: HTTPLoading {
+open class URLSessionLoader: HTTPLoader {
+
+    public init(_ session: URLSession) {
+        self.session = session
+    }
     
-    public func load(request: HTTPRequest, completion: @escaping (HTTPResult) -> Void) {
+    private let session: URLSession
+    
+    public override func load(request: HTTPRequest, completion: @escaping (HTTPResult) -> Void) {
+        _load(request: request, completion: completion)
+    }
+    
+}
+
+extension URLSessionLoader {
+    
+    private func _load(request: HTTPRequest, completion: @escaping (HTTPResult) -> Void) {
         guard let url = request.url else {
             // we couldn't construct a proper URL out of the request's URLComponents
             completion(.failure(HTTPError.init(code: .invalidRequest, request: request, response: nil, underlyingError: nil)))
@@ -41,7 +55,7 @@ extension URLSession: HTTPLoading {
             }
         }
         
-        let dataTask = self.dataTask(with: urlRequest) { (data, response, error) in
+        let dataTask = session.dataTask(with: urlRequest) { (data, response, error) in
             // construct a Result<HTTPResponse, HTTPError> out of the triplet of data, url response, and url error
             
             var httpResponse: HTTPResponse?
